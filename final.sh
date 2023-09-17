@@ -13,4 +13,4 @@ export BUILD_USERNAME="SSK"
 export BUILD_HOSTNAME="SSK"
 export WITHOUT_CHECK_API=true
 lunch lineage_RMX1901-userdebug
-mka nad -j8
+mka bacon -j8
