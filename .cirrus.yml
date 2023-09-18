@@ -39,7 +39,7 @@ task:
     - mkdir -p ~/rom
     - cd ~/rom
     - rm -rf * .repo
-    - repo init -u https://github.com/RisingTechOSS/android -b thirteen
+    - repo init -u https://github.com/Spark-Rom/manifest -b pyro-next
     - git clone https://github.com/Shravan55555/local_manifest --depth 1 -b main .repo/local_manifests
     - repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
     - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Sync NusantaraOS Android 11 source completed!"
@@ -59,6 +59,6 @@ task:
     - rclone copy ccache.tar.gz RMX1901:AppDrive -P
     - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Ccache NusantaraOS Android 11 uploaded successfully!"
     - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Uploading build...."
-    - rclone copy ~/rom/out/target/product/RMX1901/rising_*.zip RMX1901:ROM -P
+    - rclone copy ~/rom/out/target/product/RMX1901/spark_*.zip RMX1901:ROM -P
     - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Build $(cd ~/rom/out/target/product/juice/ && ls Nusantara_*.zip) uploaded successfully!"
  
