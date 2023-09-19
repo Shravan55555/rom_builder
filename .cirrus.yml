@@ -42,7 +42,7 @@ task:
     - repo init -u https://github.com/Spark-Rom/manifest -b pyro-next -g default,-mips,-darwin,-notdefault
     - git clone https://github.com/Shravan55555/local_manifest --depth 1 -b main .repo/local_manifests
     - repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
-    - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Sync NusantaraOS Android 11 source completed!"
+    - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Sync RisingTechOSS source completed!"
 
   Build_script:
     - sudo ln -sf /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
@@ -57,8 +57,8 @@ task:
     - cd ~/
     - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Uploading ccache...."
     - rclone copy ccache.tar.gz RMX1901:AppDrive -P
-    - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Ccache NusantaraOS Android 11 uploaded successfully!"
+    - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Ccache RisingTechOSS Android 11 uploaded successfully!"
     - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Uploading build...."
-    - rclone copy ~/rom/out/target/product/RMX1901/spark_*.zip RMX1901:ROM -P
+    - rclone copy ~/rom/out/target/product/RMX1901/rising_*.zip RMX1901:ROM -P
     - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Build $(cd ~/rom/out/target/product/juice/ && ls Nusantara_*.zip) uploaded successfully!"
  
