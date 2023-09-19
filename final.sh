@@ -12,5 +12,5 @@ ccache -z
 export BUILD_USERNAME="SSK"
 export BUILD_HOSTNAME="SSK"
 export WITHOUT_CHECK_API=true
-lunch spark_RMX1901-userdebug
+lunch lineage_RMX1901-userdebug
 mka bacon -j8
