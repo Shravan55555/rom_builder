@@ -13,7 +13,7 @@ export BUILD_USERNAME="SSK"
 export BUILD_HOSTNAME="SSK"
 export WITHOUT_CHECK_API=true
 lunch lineage_RMX1901-userdebug
-mka bacon &
+m evolution &
 sleep 97m
 kill %1
 ccache -s
