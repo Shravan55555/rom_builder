@@ -8,7 +8,7 @@ task:
   name: "test script"
   timeout_in: 120m
   container:
-    image: inok2341/anu:latest
+    image: accupara/ubuntu:22.04
     cpu: 8
     memory: 32G
 
