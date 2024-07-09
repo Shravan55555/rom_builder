@@ -39,9 +39,9 @@ task:
     - mkdir -p ~/rom
     - cd ~/rom
     - rm -rf * .repo
-    - repo init -u https://github.com/Evolution-XYZ/manifest -b udc -g default,-mips,-darwin,-notdefault
-    - git clone https://github.com/shravansayz/local_manifests --depth 1 -b evox .repo/local_manifests
-    - repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
+    - repo init -u https://github.com/The-Pixel-Project/manifest -b fourteen-qpr3 -g default,-mips,-darwin,-notdefault --git-lfs
+    - https://github.com/shravansayz/local_manifests.git -b pos14 .repo/local_manifests
+    - repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
     - curl -s https://api.telegram.org/$telegram_bot_token/sendMessage -d chat_id=$telegram_id_channel -d text="Sync RisingTechOSS source completed!"
 
   Build_script:
