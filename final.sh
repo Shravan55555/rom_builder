@@ -12,5 +12,5 @@ ccache -z
 export BUILD_USERNAME="SSK"
 export BUILD_HOSTNAME="SSK"
 export WITHOUT_CHECK_API=true
-lunch aosp_RMX1901-userdebug
+lunch aosp_RMX1901-ap2a-userdebug
 make bacon -j$(nproc --all)
